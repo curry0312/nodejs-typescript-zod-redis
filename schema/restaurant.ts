@@ -1,9 +1,9 @@
 import { z } from "zod";
 
 export const RestaurantSchema = z.object({
-  name: z.string().min(3).max(255),
-  cuisines: z.string().min(3),
-  location: z.string().min(3).max(255),
+  name: z.string().min(1).max(255),
+  cuisines: z.array(z.string().min(1)),
+  location: z.string().min(1).max(255),
 });
 
 export const RestaurantDetailsSchema = z.object({
