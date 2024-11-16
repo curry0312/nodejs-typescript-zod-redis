@@ -5,7 +5,7 @@ export function successResponse(
   data: any,
   message: string = "Success"
 ) {
-  return res.status(200).json({
+  res.status(200).json({
     success: true,
     message,
     data,
@@ -17,7 +17,7 @@ export function errorResponse(
   statusCode: number,
   error: string,
 ) {
-  return res.status(statusCode).json({
+  res.status(statusCode).json({
     success: false,
     error,
   });
